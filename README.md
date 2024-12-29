@@ -22,8 +22,8 @@ API RESTful desarrollada con NestJS para gestionar tareas (Task Manager). Permit
 
 1. Clonar el repositorio:
 ```bash
-git clone [URL-del-repositorio]
-cd task-manager-api
+git clone https://github.com/JUNIORCEDE/task-manager-backend.git
+cd task-manager-backend
 ```
 
 2. Instalar dependencias:
