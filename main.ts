@@ -12,7 +12,8 @@ async function bootstrap() {
   const app = await NestFactory.create(AppModule);
 
   app.enableCors({
-    origin: ['http://localhost:3001', 'https://task-manager-frontend-nine-beryl.vercel.app/'],
+    // origin: ['http://localhost:3001', 'https://task-manager-frontend-nine-beryl.vercel.app/'],
+    origin: true,
     methods: ['GET', 'POST', 'PUT', 'DELETE', 'PATCH', 'OPTIONS'],
     credentials: true,
     allowedHeaders: ['Content-Type', 'Authorization', 'Accept'],
@@ -42,6 +43,7 @@ async function bootstrap() {
   await app.listen(port, () => {
     console.log(`🚀 Servidor corriendo en puerto ${port}`);
     console.log(`📚 Documentación Swagger disponible en http://localhost:${port}/api`);
+    console.log('👮🏻‍♂️ Cors all Origin');
   });
 }
 
